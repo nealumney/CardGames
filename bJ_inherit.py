@@ -4,12 +4,14 @@ from random import choice, randint
 # still to fix (Ace can be 1 or 11 (eleven)
 class BlackJack(CardGame):
 
-    def __init__(self, game, imgPath = "/home/neal/Documents/Python oop/blackjack/Small_PNG/", gameTitle = "Basic Game",
+    def __init__(self, game, imgPath = "Small_PNG/", gameTitle = "Basic Game",
                  numCards = 6):
         super().__init__(game, imgPath, gameTitle, numCards)
         self.newGame()
 
     def deal(self):
+        # TODO: check that the user has NOT already won or lost!
+
         # Check twisting legal (<22)
         # need to get another card, display the card, find the new score, determine if game won or lost or ongoing
         for i in range(len(self.playerImages)-1):

@@ -127,6 +127,7 @@ class CardGame:
 
     def getScore(self, scoresList):
         score = 0
+        # TODO: Only works if there is just one ace, what if two or three?
         ace = False
         for s in scoresList:
             if s:
