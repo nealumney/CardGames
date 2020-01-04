@@ -109,7 +109,7 @@ class BlackJack(CardGame):
             self.dealerCardLabels[d] = Label(self.game, image=self.cardBack, borderwidth=2, relief="groove")
             # cardLabels[c] = Label(self.game, text=file+" "+str(scores[c]), borderwidth=2, relief="groove")
             self.dealerCardLabels[d].grid(column=d, row=4)
-            self.dealerScore = self.dealerScore + int(self.dealerScores[d])
+            self.dealerScore = self.getScore(self.dealerScores)
         self.dealerScoreLabel = Label(self.game,
                                       text="Dealer score is: {}".format(self.dealerScore),
                                       borderwidth=2, relief="groove")

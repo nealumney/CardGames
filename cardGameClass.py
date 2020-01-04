@@ -128,17 +128,20 @@ class CardGame:
     def getScore(self, scoresList):
         score = 0
         # TODO: Only works if there is just one ace, what if two or three?
-        ace = False
+        ace = 0
         for s in scoresList:
             if s:
                 # print(s)
                 score = score + s
                 if s == 11:
                     # print("we got an ace")
-                    ace = True
-        if score > 21 and ace == True:
-            # print("now we subtract 10")
-            score = score - 10
+                    ace = ace +1
+        if score > 21 and ace > 0:
+            while ace > 0:
+
+                # print("now we subtract 10")
+                score = score - 10
+                ace = ace -1
         return score
 
 
